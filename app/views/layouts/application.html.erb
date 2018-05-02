@@ -18,7 +18,7 @@
       <ul class="nav justify-content-end">
         <% if user_signed_in? %>
           <li>
-            <%= link_to('Edit User', edit_user_registration_path) %>
+            <span style="display:inline-block; width: 90px;"><%= link_to('Edit User', edit_user_registration_path) %></span>
           </li>
           <li>
             <%= link_to('Logout', destroy_user_session_path, method: :delete) %>
