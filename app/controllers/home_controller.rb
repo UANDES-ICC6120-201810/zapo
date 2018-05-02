@@ -1,12 +1,14 @@
 class HomeController < ApplicationController
   before_action :authenticate_user!
   def index
+  end
+  def ssh_connection
     require 'rubygems'
     require 'net/ssh'
 
-    @hostname = ''
-    @username = ''
-    @password = ''
+    @hostname = '192.168.1.126'
+    @username = 'sduran'
+    @password = 'txhqrfen'
     @cmd = "ls"
 
     begin
