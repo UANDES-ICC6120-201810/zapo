@@ -8,9 +8,9 @@ class HomeController < ApplicationController
     require 'rubygems'
     require 'net/ssh'
 
-    @hostname = '192.168.1.126'
-    @username = 'sduran'
-    @password = 'txhqrfen'
+    @hostname = ''
+    @username = ''
+    @password = ''
     @cmd = "ls"
 
     begin
