@@ -16,7 +16,7 @@ gem 'uglifier', '>= 1.3.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'mini_racer', platforms: :ruby
 gem 'devise'
-
+gem 'wdm', '>= 0.1.0' if Gem.win_platform?
 gem 'net-ssh'
 
 # Use CoffeeScript for .coffee assets and views
