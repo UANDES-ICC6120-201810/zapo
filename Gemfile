@@ -17,6 +17,9 @@ gem 'uglifier', '>= 1.3.0'
 # gem 'mini_racer', platforms: :ruby
 gem 'devise'
 gem 'wdm', '>= 0.1.0' if Gem.win_platform?
+gem 'grape'
+gem 'rack-cors', :require => 'rack/cors'
+gem 'grape-active_model_serializers'
 gem 'net-ssh'
 
 # Use CoffeeScript for .coffee assets and views
