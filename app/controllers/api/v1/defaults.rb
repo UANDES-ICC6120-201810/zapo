@@ -1,3 +1,4 @@
+# ------------- Aqui se define el formato por defecto de la respuesta de la API -------------
 module API
   module V1
     module Defaults
