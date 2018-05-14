@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_05_13_221003) do
+ActiveRecord::Schema.define(version: 2018_05_13_233233) do
 
   create_table "access_group_bus_stops", force: :cascade do |t|
     t.integer "accessGroup_id"
@@ -35,6 +35,23 @@ ActiveRecord::Schema.define(version: 2018_05_13_221003) do
     t.string "Description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "access_points", force: :cascade do |t|
+    t.string "mac"
+    t.string "ip"
+    t.string "status"
+    t.string "token"
+    t.string "last_message"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "access_points_devices", id: false, force: :cascade do |t|
+    t.integer "device_id", null: false
+    t.integer "access_point_id", null: false
+    t.index ["access_point_id"], name: "index_access_points_devices_on_access_point_id"
+    t.index ["device_id"], name: "index_access_points_devices_on_device_id"
   end
 
   create_table "bus_events", force: :cascade do |t|
@@ -92,6 +109,39 @@ ActiveRecord::Schema.define(version: 2018_05_13_221003) do
     t.string "BusPlateNumber"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "devices", force: :cascade do |t|
+    t.string "device_type"
+    t.string "trademark"
+    t.string "device_model"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "name"
+  end
+
+  create_table "file_packages", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "file_packages_access_points", id: false, force: :cascade do |t|
+    t.integer "file_package_id"
+    t.integer "access_point_id"
+    t.datetime "sent"
+    t.datetime "installed"
+    t.index ["access_point_id"], name: "index_file_packages_access_points_on_access_point_id"
+    t.index ["file_package_id"], name: "index_file_packages_access_points_on_file_package_id"
+  end
+
+  create_table "file_to_updates", force: :cascade do |t|
+    t.string "name"
+    t.string "file"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "file_package_id"
+    t.index ["file_package_id"], name: "index_file_to_updates_on_file_package_id"
   end
 
   create_table "operators", force: :cascade do |t|
