@@ -2,14 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="804388fa-820b-4157-a997-de7c13dae676" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/controllers/api/v1/buses.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/serializers/buses_serializer.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/zapo.iml" afterPath="$PROJECT_DIR$/.idea/zapo.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/api/v1/base.rb" afterPath="$PROJECT_DIR$/app/controllers/api/v1/base.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/api/v1/defaults.rb" afterPath="$PROJECT_DIR$/app/controllers/api/v1/defaults.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/api/v1/operators.rb" afterPath="$PROJECT_DIR$/app/controllers/api/v1/operators.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/serializers/operator_serializer.rb" afterPath="$PROJECT_DIR$/app/serializers/operator_serializer.rb" />
     </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
@@ -337,12 +330,12 @@
       <workItem from="1525106206780" duration="9031000" />
       <workItem from="1526248534920" duration="3463000" />
       <workItem from="1526259624460" duration="12332000" />
-      <workItem from="1526310626268" duration="3875000" />
+      <workItem from="1526310626268" duration="3891000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="40314000" />
+    <option name="totallyTimeSpent" value="40330000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
