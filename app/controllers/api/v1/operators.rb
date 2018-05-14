@@ -1,4 +1,4 @@
-#test sample
+# ------------- Aqui se define los endpoints con respecto a la tabla 'Operator' -------------
 module API
   module V1
     class Operators < Grape::API
