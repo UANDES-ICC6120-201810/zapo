@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  service: one
+  bus: one
+  operator: one
+  CapturedAt: 2018-05-13 18:07:34
+
+two:
+  service: two
+  bus: two
+  operator: two
+  CapturedAt: 2018-05-13 18:07:34

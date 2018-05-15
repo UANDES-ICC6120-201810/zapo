@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  busStop: one
+  EventTime: 2018-05-13 18:05:00
+  AmountOfPeople: 9.99
+
+two:
+  busStop: two
+  EventTime: 2018-05-13 18:05:00
+  AmountOfPeople: 9.99

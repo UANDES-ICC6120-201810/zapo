@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  bus: one
+  busStop: one
+  EventTime: 2018-05-13 18:05:46
+  BusSpeed: 9.99
+
+two:
+  bus: two
+  busStop: two
+  EventTime: 2018-05-13 18:05:46
+  BusSpeed: 9.99

@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  accessGroup: one
+  busStop: one
+
+two:
+  accessGroup: two
+  busStop: two

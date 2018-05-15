@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  busStop: one
+  service: one
+  LastArrivalEstimation: MyString
+  CapturedAt: 2018-05-13 18:06:41
+
+two:
+  busStop: two
+  service: two
+  LastArrivalEstimation: MyString
+  CapturedAt: 2018-05-13 18:06:41
