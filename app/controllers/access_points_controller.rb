@@ -54,7 +54,10 @@ class AccessPointsController < ApplicationController
   # DELETE /access_points/1
   # DELETE /access_points/1.json
   def destroy
-    @access_point.destroy
+    @access_points.file_packages
+    access_point = AccessPoint.find(params[:id]).id
+    FilePackage.access_points.delete(access_point)
+    #@access_point.destroy
     respond_to do |format|
       format.html { redirect_to access_points_url, notice: 'Access point was successfully destroyed.' }
       format.json { head :no_content }
@@ -69,6 +72,6 @@ class AccessPointsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def access_point_params
-      params.fetch(:access_point, {})
+      params.require(:access_point).permit(:mac, :ip, :status, :token, :last_message)
     end
 end

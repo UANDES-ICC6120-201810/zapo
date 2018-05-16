@@ -14,6 +14,11 @@ class AccessPointsTest < ApplicationSystemTestCase
     visit access_points_url
     click_on "New Access Point"
 
+    fill_in "Ip", with: @access_point.ip
+    fill_in "Last Message", with: @access_point.last_message
+    fill_in "Mac", with: @access_point.mac
+    fill_in "Status", with: @access_point.status
+    fill_in "Token", with: @access_point.token
     click_on "Create Access point"
 
     assert_text "Access point was successfully created"
@@ -24,6 +29,11 @@ class AccessPointsTest < ApplicationSystemTestCase
     visit access_points_url
     click_on "Edit", match: :first
 
+    fill_in "Ip", with: @access_point.ip
+    fill_in "Last Message", with: @access_point.last_message
+    fill_in "Mac", with: @access_point.mac
+    fill_in "Status", with: @access_point.status
+    fill_in "Token", with: @access_point.token
     click_on "Update Access point"
 
     assert_text "Access point was successfully updated"

@@ -17,7 +17,7 @@ class AccessPointsControllerTest < ActionDispatch::IntegrationTest
 
   test "should create access_point" do
     assert_difference('AccessPoint.count') do
-      post access_points_url, params: { access_point: {  } }
+      post access_points_url, params: { access_point: { ip: @access_point.ip, last_message: @access_point.last_message, mac: @access_point.mac, status: @access_point.status, token: @access_point.token } }
     end
 
     assert_redirected_to access_point_url(AccessPoint.last)
@@ -34,7 +34,7 @@ class AccessPointsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update access_point" do
-    patch access_point_url(@access_point), params: { access_point: {  } }
+    patch access_point_url(@access_point), params: { access_point: { ip: @access_point.ip, last_message: @access_point.last_message, mac: @access_point.mac, status: @access_point.status, token: @access_point.token } }
     assert_redirected_to access_point_url(@access_point)
   end
 
