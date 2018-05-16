@@ -1,3 +1,3 @@
 class BusStopCongestion < ApplicationRecord
-  belongs_to :busStop
+  belongs_to :bus_stop
 end

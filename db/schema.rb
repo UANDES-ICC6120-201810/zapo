@@ -10,29 +10,29 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_05_13_233233) do
+ActiveRecord::Schema.define(version: 2018_05_16_052612) do
 
   create_table "access_group_bus_stops", force: :cascade do |t|
-    t.integer "accessGroup_id"
-    t.integer "busStop_id"
+    t.integer "access_group_id"
+    t.integer "bus_stop_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["accessGroup_id"], name: "index_access_group_bus_stops_on_accessGroup_id"
-    t.index ["busStop_id"], name: "index_access_group_bus_stops_on_busStop_id"
+    t.index ["access_group_id"], name: "index_access_group_bus_stops_on_access_group_id"
+    t.index ["bus_stop_id"], name: "index_access_group_bus_stops_on_bus_stop_id"
   end
 
   create_table "access_group_services", force: :cascade do |t|
-    t.integer "accessGroup_id"
+    t.integer "access_group_id"
     t.integer "service_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["accessGroup_id"], name: "index_access_group_services_on_accessGroup_id"
+    t.index ["access_group_id"], name: "index_access_group_services_on_access_group_id"
     t.index ["service_id"], name: "index_access_group_services_on_service_id"
   end
 
   create_table "access_groups", force: :cascade do |t|
-    t.string "Name"
-    t.string "Description"
+    t.string "name"
+    t.string "description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -56,20 +56,20 @@ ActiveRecord::Schema.define(version: 2018_05_13_233233) do
 
   create_table "bus_events", force: :cascade do |t|
     t.integer "bus_id"
-    t.integer "busStop_id"
-    t.datetime "EventTime"
-    t.decimal "BusSpeed"
+    t.integer "bus_stop_id"
+    t.datetime "event_time"
+    t.decimal "bus_speed"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["busStop_id"], name: "index_bus_events_on_busStop_id"
     t.index ["bus_id"], name: "index_bus_events_on_bus_id"
+    t.index ["bus_stop_id"], name: "index_bus_events_on_bus_stop_id"
   end
 
   create_table "bus_services", force: :cascade do |t|
     t.integer "service_id"
     t.integer "bus_id"
     t.integer "operator_id"
-    t.datetime "CapturedAt"
+    t.datetime "captured_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["bus_id"], name: "index_bus_services_on_bus_id"
@@ -78,35 +78,36 @@ ActiveRecord::Schema.define(version: 2018_05_13_233233) do
   end
 
   create_table "bus_stop_congestions", force: :cascade do |t|
-    t.integer "busStop_id"
-    t.datetime "EventTime"
-    t.decimal "AmountOfPeople"
+    t.integer "bus_stop_id"
+    t.datetime "event_time"
+    t.decimal "amount_of_people"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["busStop_id"], name: "index_bus_stop_congestions_on_busStop_id"
+    t.string "ImageUrl"
+    t.index ["bus_stop_id"], name: "index_bus_stop_congestions_on_bus_stop_id"
   end
 
   create_table "bus_stop_services", force: :cascade do |t|
-    t.integer "busStop_id"
+    t.integer "bus_stop_id"
     t.integer "service_id"
-    t.string "LastArrivalEstimation"
-    t.datetime "CapturedAt"
+    t.string "last_arrival_estimation"
+    t.datetime "captured_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["busStop_id"], name: "index_bus_stop_services_on_busStop_id"
+    t.index ["bus_stop_id"], name: "index_bus_stop_services_on_bus_stop_id"
     t.index ["service_id"], name: "index_bus_stop_services_on_service_id"
   end
 
   create_table "bus_stops", force: :cascade do |t|
-    t.string "Code"
-    t.string "Location"
-    t.string "Name"
+    t.string "code"
+    t.string "location"
+    t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "buses", force: :cascade do |t|
-    t.string "BusPlateNumber"
+    t.string "bus_plate_number"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -145,29 +146,29 @@ ActiveRecord::Schema.define(version: 2018_05_13_233233) do
   end
 
   create_table "operators", force: :cascade do |t|
-    t.string "Name"
-    t.integer "OperatorNumber"
+    t.string "name"
+    t.integer "operator_number"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "services", force: :cascade do |t|
-    t.string "RouteCode"
+    t.string "route_code"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "subscribed_customers", force: :cascade do |t|
-    t.integer "accessGroup_id"
-    t.string "Name"
+    t.integer "access_group_id"
+    t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["accessGroup_id"], name: "index_subscribed_customers_on_accessGroup_id"
+    t.index ["access_group_id"], name: "index_subscribed_customers_on_access_group_id"
   end
 
   create_table "user_roles", force: :cascade do |t|
-    t.string "Name"
-    t.string "Description"
+    t.string "name"
+    t.string "description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

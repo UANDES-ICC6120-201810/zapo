@@ -1,4 +1,4 @@
 class BusStopService < ApplicationRecord
-  belongs_to :busStop
+  belongs_to :bus_stop
   belongs_to :service
 end
